@@ -24,3 +24,5 @@ Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 Route::get('login', 'SessionsController@create')->name('login');    //显示登陆页面
 Route::post('login', 'SessionsController@store')->name('login');    //登录
 Route::delete('logout', 'SessionsController@destroy')->name('logout');  //退出登陆
+//用户编辑页面
+Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
