@@ -20,3 +20,7 @@ Route::resource('users', 'UsersController');
 
 //显示用户信息
 Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+//登录和注销
+Route::get('login', 'SessionsController@create')->name('login');    //显示登陆页面
+Route::post('login', 'SessionsController@store')->name('login');    //登录
+Route::delete('logout', 'SessionsController@destroy')->name('logout');  //退出登陆
